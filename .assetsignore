@@ -6,6 +6,8 @@ node_modules/
 .claude/
 .DS_Store
 README.md
+PRODUCT.md
+DESIGN.md
 wrangler.toml
 .assetsignore
 package.json
