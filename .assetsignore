@@ -3,6 +3,7 @@
 .gitattributes
 node_modules/
 .wrangler/
+.claude/
 .DS_Store
 README.md
 wrangler.toml
