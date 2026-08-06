@@ -56,9 +56,8 @@ built and shipped solo in 8 weeks.
 ## Operating Context
 
 Reviewers are comparing many candidates quickly, often on a phone or a second monitor,
-often mid-meeting. The resume is a parallel artifact — currently a Google Doc link — and
-some reviewers will want it before they read anything else. LinkedIn is the dominant
-referrer.
+often mid-meeting. The resume is a parallel artifact some reviewers want before they read
+anything else. LinkedIn is the dominant referrer.
 
 ## Capabilities and Constraints
 
@@ -74,6 +73,17 @@ referrer.
     resolves to nothing.
   - "Solution Oveview" (missing `r`) in the advisor-navigation case study.
   - Hero claims "8+ years" and "15+ years" in adjacent lines.
+- **Currently freelancing (confirmed 2026-08-06).** This is the present-tense anchor that
+  replaces Tovuti in all copy: Erik is a freelance product designer. Ridgeframe Strategies
+  and his co-founder still stay off this surface by his decision, so the site says
+  "freelance" without naming the firm.
+- **The six-role audience switcher is removed (confirmed 2026-08-06).** For Everyone,
+  Hiring Managers, Product Designers, Product Managers, Design Directors, and Developers
+  collapse into one positioning statement aimed at the hiring manager. Do not rebuild the
+  switcher; the six near-paraphrased pitch lines retire with it.
+- **The resume ships as a hosted PDF (confirmed 2026-08-06),** replacing the Google Docs
+  link. Erik confirms the document is final. The PDF itself is an asset he must supply; it
+  is not in the repository yet.
 - **Employment status (confirmed 2026-08-06):** Erik is no longer at Tovuti LMS. All
   present-tense Tovuti copy in the incumbent is stale and must be rewritten, including
   "currently shipping at Tovuti LMS" and "April 2026 is a strange time to be doing this
