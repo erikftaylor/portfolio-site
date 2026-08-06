@@ -1,0 +1,13 @@
+{
+  "name": "portfolio-site",
+  "private": true,
+  "scripts": {
+    "dev": "wrangler dev",
+    "upload": "wrangler versions upload",
+    "versions": "wrangler versions list",
+    "promote": "wrangler versions deploy"
+  },
+  "devDependencies": {
+    "wrangler": "4.118.0"
+  }
+}
