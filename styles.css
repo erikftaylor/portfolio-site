@@ -15,7 +15,7 @@
 }
 
 :root {
-  /* Four ink roles. Key carries every character of type; field owns whole
+  /* Three inks on paper. Key carries every character of type; field owns whole
      regions; signal is reserved for the one thing that matters per section. */
   --paper: #ffffff;
   --paper-2: #f1f1ef;
@@ -25,7 +25,6 @@
   --field: #3d5588;
   --field-deep: #2b3c62;
   --signal: #ff48b0;
-  --yellow: #ffe800;
 
   --display: 'Archivo Black', system-ui, sans-serif;
   --text: 'Archivo', system-ui, sans-serif;
@@ -72,7 +71,7 @@ body::before {
   content: '';
   position: fixed;
   inset: 0;
-  z-index: 1;
+  z-index: 50;
   pointer-events: none;
   background-image: radial-gradient(circle at center, rgba(22, 22, 26, 0.5) 30%, transparent 32%);
   background-size: 5px 5px;
@@ -223,8 +222,6 @@ img {
 
 /* -------------------------------------------------------------------- plate */
 
-/* A plate is one image run through the drum: grayscale stock, one ink,
-   a coarse dot screen on top. Coarse enough to read as intent. */
 /* The ink owns the mat, not the artwork. The screenshots are the proof and
    have to stay legible, so the field colors the region around them and the
    dot screen runs across the whole sheet. */
@@ -275,6 +272,27 @@ img {
   .plate--crop img {
     aspect-ratio: 4 / 5;
     object-position: top left;
+  }
+}
+
+/* Wide research boards and nav strips cannot be cropped without destroying
+   what they show, so on a phone the plate pans instead. Keyboard-reachable,
+   because a scroll container that only answers to touch is unreachable. */
+@media (max-width: 720px) {
+  .plate--pan {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .plate--pan img {
+    width: auto;
+    max-width: none;
+    min-width: 720px;
+  }
+
+  .plate--pan:focus-visible {
+    outline: 3px solid var(--signal);
+    outline-offset: 3px;
   }
 }
 
@@ -531,7 +549,7 @@ figcaption {
 
 .quotes blockquote {
   margin: 0;
-  border-top: 3px solid var(--yellow);
+  border-top: 3px solid var(--paper);
   padding-top: 1.25rem;
 }
 
@@ -796,7 +814,7 @@ figcaption {
   font-size: 1.0625rem;
   line-height: 1.3;
   letter-spacing: -0.02em;
-  border-top: 3px solid var(--yellow);
+  border-top: 3px solid var(--paper);
   padding-top: 1rem;
   quotes: none;
 }
@@ -824,8 +842,6 @@ figcaption {
 
 /* --------------------------------------------------------------- print run */
 
-/* One authored moment: each plate arrives slightly out of register and
-   settles, the way a sheet lands under the drum. Visible by default. */
 /* One authored moment, on the hero plate only: the signal plate sits out of
    register and slides onto the key as the sheet settles. Content is never
    hidden waiting on script — the ghost is a second layer over a finished page. */
