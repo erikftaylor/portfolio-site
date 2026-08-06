@@ -284,15 +284,39 @@ img {
     -webkit-overflow-scrolling: touch;
   }
 
+  /* A fixed pan width, not a floor: `min-width` let the art render at its
+     intrinsic 1440–1920px, so the plate ate four phone screens to show a
+     quarter of the board. */
   .plate--pan img {
-    width: auto;
+    width: 720px;
     max-width: none;
-    min-width: 720px;
   }
 
   .plate--pan:focus-visible {
     outline: 3px solid var(--signal);
     outline-offset: 3px;
+  }
+
+  /* The screen has to travel with the ink it is printed on, so it moves to
+     the sheet inside the scroll container rather than the fixed window. */
+  .plate--pan::after {
+    content: none;
+  }
+
+  .plate--pan .pan-sheet {
+    position: relative;
+    width: max-content;
+  }
+
+  .plate--pan .pan-sheet::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: radial-gradient(circle at center, rgba(0, 0, 0, 0.55) 30%, transparent 32%);
+    background-size: 5px 5px;
+    mix-blend-mode: multiply;
+    opacity: 0.2;
+    pointer-events: none;
   }
 }
 
