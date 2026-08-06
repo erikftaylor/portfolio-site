@@ -4,6 +4,7 @@
 node_modules/
 .wrangler/
 .claude/
+.impeccable/
 .DS_Store
 README.md
 PRODUCT.md
