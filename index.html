@@ -47,16 +47,19 @@
   <section class="hero">
     <div class="shell">
       <h1>I design the parts of AI products that <em>don't behave.</em></h1>
-      <p class="hero__lede">Freelance product designer in Denver. Fifteen years across IBM,
+      <p class="hero__lede">Freelance product designer in Denver. 15+ years across IBM,
       Transamerica, and Tovuti LMS — and the work now is non-deterministic output, confidence
       variance, trust signals, and failure states that don't behave like traditional errors.</p>
       <div class="hero__actions">
         <a class="btn btn--lg" href="mailto:erikftaylor@gmail.com">Email me</a>
         <p class="hero__status"><b>Open to product design roles</b> and freelance engagements.</p>
       </div>
-      <figure class="hero__plate ink">
+      <figure class="hero__plate registration">
         <div class="plate">
-          <img src="/media/journey-tool.webp" alt="The journey-map generator: a browser view of an automatically synthesized friction map, with stages across the top and clustered evidence beneath each one." width="1600" height="900" fetchpriority="high">
+          <picture>
+            <source media="(max-width: 720px)" srcset="/media/journey-tool-mobile.webp">
+            <img src="/media/journey-tool.webp" alt="The journey-map generator: stage columns across the top with synthesized friction findings clustered in each one." width="2560" height="2218" fetchpriority="high">
+          </picture>
         </div>
         <figcaption>The journey-map generator. Rather than hand-auditing scattered docs and
         tickets for weeks, I bet a week of build time against months of manual work and
@@ -74,10 +77,10 @@
 
       <div class="work">
 
-        <article class="entry ink">
+        <article class="entry">
           <figure>
-            <div class="plate plate--signal plate--crop">
-              <img src="/media/journey-detail.webp" alt="A detail of the generated journey map showing a single stage expanded into its supporting quotes and ticket references." width="1200" height="800" loading="lazy">
+            <div class="plate plate--deep plate--crop">
+              <img src="/media/journey-detail.webp" alt="Several stage columns of the generated journey map side by side, each listing its synthesized friction findings." width="1840" height="1150" loading="lazy">
             </div>
           </figure>
           <div class="entry__body">
@@ -92,7 +95,7 @@
           </div>
         </article>
 
-        <article class="entry entry--flip ink">
+        <article class="entry entry--flip">
           <figure>
             <div class="plate plate--crop">
               <img src="/media/portal-dashboard.webp" alt="The redesigned financial agent portal dashboard shown on a laptop." width="1200" height="800" loading="lazy">
@@ -110,7 +113,7 @@
           </div>
         </article>
 
-        <article class="entry ink">
+        <article class="entry">
           <figure>
             <div class="plate plate--crop">
               <img src="/media/wfg-concept-2.webp" alt="Concept 2 of the WFG agent portal home page, organizing tools by frequency of use." width="1200" height="800" loading="lazy">
@@ -128,7 +131,7 @@
           </div>
         </article>
 
-        <article class="entry entry--flip ink">
+        <article class="entry entry--flip">
           <figure>
             <div class="plate plate--deep plate--crop">
               <img src="/media/ibm-guidebook.webp" alt="A page of IBM's Digital Sellers Guidebook showing condensed task guidance in place of training material." width="1200" height="800" loading="lazy">
@@ -154,8 +157,8 @@
     <div class="shell">
       <h2>Where the decisions get made</h2>
       <div class="split">
-        <div class="prose ink">
-          <p>I'm a Denver-based product designer with fifteen years of experience — at IBM as a
+        <div class="prose">
+          <p>I'm a Denver-based product designer with 15+ years of experience — at IBM as a
           copywriter, then a team lead, then a product owner and designer; at Transamerica in
           financial services; and most recently at Tovuti LMS, designing the interfaces that
           help teams teach, learn, and work together.</p>
@@ -175,7 +178,7 @@
             </div>
           </figure>
         </div>
-        <div class="ink">
+        <div>
           <ul class="history">
             <li><b>Freelance Product Designer</b> <time>2026 — present</time></li>
             <li><b>Product Designer, Tovuti LMS</b> <time>2025 — 2026</time></li>
@@ -194,21 +197,21 @@
     <div class="shell">
       <h2>What people who worked with me said</h2>
       <div class="quotes">
-        <blockquote class="ink">
+        <blockquote>
           <p>Working with Erik as his manager and design partner, I admired his passion for deep
           customer empathy, collaborative approach, and focus on continuous improvement. He
           continually sought feedback on his ideas and performance, and was always interested in
           how he could better serve customers and his teams.</p>
           <footer><b>Adam Reed</b> Design Lead, Transamerica</footer>
         </blockquote>
-        <blockquote class="ink">
+        <blockquote>
           <p>Erik and I seamlessly collaborated on many design projects, including our ambitious
           redesign of the life customer and agent portal. He was always generous with his time,
           reviewing my work and offering thoughtful feedback, and I could always count on him
           for help when needed.</p>
           <footer><b>Joseph Pham</b> UX Designer, Transamerica</footer>
         </blockquote>
-        <blockquote class="ink">
+        <blockquote>
           <p>During Erik's time with us, he consistently demonstrated exceptional skill,
           creativity, and a calming demeanor that fostered collaboration and trust among team
           members. Erik's expertise, thoughtfulness, and steady presence make him a tremendous
@@ -219,7 +222,7 @@
     </div>
   </section>
 
-  <section class="section contact" id="contact">
+  <section class="section contact overprint" id="contact">
     <div class="shell">
       <h2>Design is how I make sense of hard problems.</h2>
       <p class="section__intro">AI is how I'm staying ahead of them. If you're building something
@@ -250,7 +253,7 @@
 <script>
 document.documentElement.classList.add('js');
 (function () {
-  var items = document.querySelectorAll('.ink');
+  var items = document.querySelectorAll('.registration');
   if (!('IntersectionObserver' in window) || matchMedia('(prefers-reduced-motion: reduce)').matches) {
     items.forEach(function (el) { el.classList.add('is-registered'); });
     return;

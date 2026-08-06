@@ -55,6 +55,7 @@ html {
 }
 
 body {
+  position: relative;
   margin: 0;
   background: var(--paper);
   color: var(--key);
@@ -63,6 +64,19 @@ body {
   line-height: 1.65;
   font-synthesis-weight: none;
   -webkit-font-smoothing: antialiased;
+}
+
+/* The stock. The screen runs across the whole sheet, not only inside plates —
+   faint on paper, because uncoated white is mostly paper and very little ink. */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background-image: radial-gradient(circle at center, rgba(22, 22, 26, 0.5) 30%, transparent 32%);
+  background-size: 5px 5px;
+  opacity: 0.055;
 }
 
 h1,
@@ -161,12 +175,24 @@ img {
 }
 
 .masthead nav a:hover {
-  border-bottom-color: var(--signal);
+  border-bottom-color: var(--field);
 }
 
 @media (max-width: 720px) {
+  .masthead__inner {
+    flex-wrap: wrap;
+    padding-block: 0.6rem;
+    row-gap: 0.35rem;
+  }
+
   .masthead nav {
-    display: none;
+    order: 3;
+    width: 100%;
+    gap: 1.25rem;
+  }
+
+  .masthead nav a {
+    font-size: 0.875rem;
   }
 }
 
@@ -241,6 +267,15 @@ img {
   aspect-ratio: 16 / 10;
   object-fit: cover;
   object-position: top center;
+}
+
+/* On a phone a 16:10 crop of a dense interface is an unreadable thumbnail.
+   Taller frame, anchored top-left, so real content survives the width. */
+@media (max-width: 720px) {
+  .plate--crop img {
+    aspect-ratio: 4 / 5;
+    object-position: top left;
+  }
 }
 
 figure {
@@ -370,7 +405,7 @@ figcaption {
 
 .entry__body h3 a {
   text-decoration: none;
-  background-image: linear-gradient(var(--signal), var(--signal));
+  background-image: linear-gradient(var(--field), var(--field));
   background-repeat: no-repeat;
   background-position: 0 100%;
   background-size: 0% 3px;
@@ -443,7 +478,7 @@ figcaption {
 .prose a {
   color: inherit;
   text-underline-offset: 3px;
-  text-decoration-color: var(--signal);
+  text-decoration-color: var(--field);
   text-decoration-thickness: 2px;
 }
 
@@ -496,7 +531,7 @@ figcaption {
 
 .quotes blockquote {
   margin: 0;
-  border-top: 3px solid var(--signal);
+  border-top: 3px solid var(--yellow);
   padding-top: 1.25rem;
 }
 
@@ -543,7 +578,7 @@ figcaption {
 
 .linklist a {
   text-underline-offset: 3px;
-  text-decoration-color: var(--signal);
+  text-decoration-color: var(--field);
   text-decoration-thickness: 2px;
 }
 
@@ -556,6 +591,74 @@ figcaption {
   flex-wrap: wrap;
   gap: 0.75rem 1.5rem;
   justify-content: space-between;
+}
+
+/* -------------------------------------------------------------- overprint */
+
+/* Two ink fields actually crossing. The signal plate covers part of the field
+   plate under multiply, so the overlap resolves to a real third colour rather
+   than a tint of either one. */
+.overprint {
+  position: relative;
+  background: var(--field);
+  color: var(--paper);
+  border-top: 1px solid var(--key);
+  isolation: isolate;
+}
+
+.overprint::before {
+  content: '';
+  position: absolute;
+  inset: 0 34% 0 0;
+  background: var(--signal);
+  mix-blend-mode: multiply;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.overprint > * {
+  position: relative;
+  z-index: 1;
+}
+
+@media (max-width: 860px) {
+  .overprint::before {
+    inset: 0 0 42% 0;
+  }
+}
+
+.overprint .section__intro {
+  color: #e6d6ea;
+}
+
+/* ------------------------------------------------------------------- band */
+
+.band {
+  margin-block: clamp(2.5rem, 6vw, 4.5rem);
+  padding-block: clamp(2.5rem, 5vw, 3.5rem);
+  background: var(--field-deep);
+  color: var(--paper);
+  border-block: 1px solid var(--key);
+}
+
+.band .pull {
+  margin-top: 0;
+}
+
+.case-close {
+  margin-top: clamp(2.5rem, 5vw, 4rem);
+  padding-top: clamp(2rem, 4vw, 2.5rem);
+  border-top: 1px solid var(--key);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1.25rem 2rem;
+}
+
+.case-close p {
+  max-width: 40ch;
+  color: var(--key-2);
+  font-size: 0.9375rem;
 }
 
 /* ------------------------------------------------------------- case study */
@@ -693,7 +796,7 @@ figcaption {
   font-size: 1.0625rem;
   line-height: 1.3;
   letter-spacing: -0.02em;
-  border-top: 3px solid var(--field);
+  border-top: 3px solid var(--yellow);
   padding-top: 1rem;
   quotes: none;
 }
@@ -715,7 +818,7 @@ figcaption {
   margin-top: clamp(2.5rem, 5vw, 4rem);
   font-weight: 600;
   text-underline-offset: 4px;
-  text-decoration-color: var(--signal);
+  text-decoration-color: var(--field);
   text-decoration-thickness: 2px;
 }
 
@@ -723,21 +826,53 @@ figcaption {
 
 /* One authored moment: each plate arrives slightly out of register and
    settles, the way a sheet lands under the drum. Visible by default. */
-/* Content is never hidden waiting on script. The class only plays the
-   arrival; without JS every plate is already on the page. */
-@keyframes register {
-  from {
-    opacity: 0;
-    transform: translate3d(0, 16px, 0);
+/* One authored moment, on the hero plate only: the signal plate sits out of
+   register and slides onto the key as the sheet settles. Content is never
+   hidden waiting on script — the ghost is a second layer over a finished page. */
+.registration {
+  position: relative;
+}
+
+.registration::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--signal);
+  mix-blend-mode: multiply;
+  opacity: 0;
+  pointer-events: none;
+  z-index: 2;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .registration.is-registered::before {
+    animation: slip 1.15s var(--ease) both;
   }
-  to {
-    opacity: 1;
+
+  .registration.is-registered .plate {
+    animation: settle 1.15s var(--ease) both;
+  }
+}
+
+@keyframes slip {
+  0% {
+    opacity: 0.85;
+    transform: translate3d(-11px, 7px, 0);
+  }
+  70% {
+    opacity: 0.28;
+  }
+  100% {
+    opacity: 0;
     transform: none;
   }
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .ink.is-registered {
-    animation: register 0.85s var(--ease) both;
+@keyframes settle {
+  0% {
+    transform: translate3d(4px, -3px, 0);
+  }
+  100% {
+    transform: none;
   }
 }

@@ -62,7 +62,7 @@
     <div class="case-body">
       <div class="shell">
 
-        <div class="prose ink">
+        <div class="prose">
           <h2>The problem</h2>
           <p>Licensed WFG agents faced significant challenges with the existing portal's global
           navigation. It was cluttered, with too many links and subcategories, making it
@@ -74,7 +74,7 @@
           different concepts agents disagreed about.</p>
         </div>
 
-        <figure class="figures ink">
+        <figure class="figures">
           <div class="plate">
             <img src="/media/wfg-current-nav.webp" alt="The existing WFG portal header navigation in its default state, showing a dense row of top-level links with nested subcategories." width="1600" height="500" loading="lazy">
           </div>
@@ -82,14 +82,14 @@
           clear path to the tools agents used every day.</figcaption>
         </figure>
 
-        <div class="prose ink">
+        <div class="prose">
           <h2>The fork</h2>
           <p>Two concepts went in front of agents. They split opinion in a way that wouldn't have
           shown up without direct feedback — and not along the lines anyone expected.</p>
         </div>
 
         <div class="concepts">
-          <div class="concept ink">
+          <div class="concept">
             <div class="plate plate--crop">
               <img src="/media/wfg-concept-1.webp" alt="Concept 1 of the WFG home page, organizing the portal along familiar business-category lines." width="1200" height="800" loading="lazy">
             </div>
@@ -97,7 +97,7 @@
             <p>Closer to what agents already knew. Lower resistance, but it under-delivered on
             the original problem.</p>
           </div>
-          <div class="concept ink">
+          <div class="concept">
             <div class="plate plate--signal plate--crop">
               <img src="/media/wfg-concept-2.webp" alt="Concept 2 of the WFG home page, reorganized by frequency of use with commissions and client management surfaced first." width="1200" height="800" loading="lazy">
             </div>
@@ -107,13 +107,23 @@
           </div>
         </div>
 
-        <div class="pull">
-          <q class="ink">I feel this is friendlier. This one would be easier to teach my recruits.</q>
-          <q class="ink">This one is better than Concept A — better because it's more aligned to how people see the business.</q>
-          <q class="ink">I like the other one better. People will have negative reaction to change.</q>
-        </div>
+      </div>
+    </div>
 
-        <div class="prose ink">
+    <div class="band">
+      <div class="shell">
+        <div class="pull">
+          <q>I feel this is friendlier. This one would be easier to teach my recruits.</q>
+          <q>This one is better than Concept A — better because it's more aligned to how people see the business.</q>
+          <q>I like the other one better. People will have negative reaction to change.</q>
+        </div>
+      </div>
+    </div>
+
+    <div class="case-body">
+      <div class="shell">
+
+        <div class="prose">
           <h2>Key decisions</h2>
 
           <h3>Simplified navigation</h3>
@@ -160,7 +170,7 @@
           </dl>
         </div>
 
-        <figure class="figures figures--2 ink">
+        <figure class="figures figures--2">
           <div class="plate">
             <img src="/media/wfg-user-needs.webp" alt="A synthesis board mapping agent needs against the tools they reach for most often." width="1200" height="900" loading="lazy">
           </div>
@@ -169,7 +179,7 @@
           </div>
         </figure>
 
-        <div class="prose ink">
+        <div class="prose">
           <h2>Process</h2>
           <p>The project began with user research — interviews and surveys with WFG agents to
           identify pain points and understand how the current navigation was affecting their
@@ -200,6 +210,12 @@
           usage for agents who work primarily from their phones. These are goals, not results.</p>
         </div>
 
+        <div class="case-close">
+          <a class="btn btn--lg" href="mailto:erikftaylor@gmail.com">Email me about this work</a>
+          <p>Happy to walk through the research, the concepts agents rejected, and what the
+          rollout data has said since.</p>
+        </div>
+
         <a class="backlink" href="/#work">← All work</a>
 
       </div>
@@ -218,7 +234,7 @@
 <script>
 document.documentElement.classList.add('js');
 (function () {
-  var items = document.querySelectorAll('.ink');
+  var items = document.querySelectorAll('.registration');
   if (!('IntersectionObserver' in window) || matchMedia('(prefers-reduced-motion: reduce)').matches) {
     items.forEach(function (el) { el.classList.add('is-registered'); });
     return;
