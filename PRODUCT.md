@@ -101,7 +101,7 @@ anything else. LinkedIn is the dominant referrer.
 
 - Name and title: Erik Taylor, product designer, Denver-based.
 - Live external properties, all confirmed present in the incumbent: LinkedIn, X, Instagram,
-  and Threads (all `@erikftaylor`), `erikftaylor.com`, and `erikftaylor.gumroad.com` where
+  and Threads (all `@erikftaylor`), and `erikftaylor.gumroad.com` where
   he publishes checklists and frameworks for designers.
 - Resume is currently a Google Docs link, surfaced twice as "Download Resume."
 - Voice in the incumbent copy is plain, direct, and admits uncertainty — "This one's still
