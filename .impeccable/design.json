@@ -1,0 +1,410 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-08-17T00:00:00Z",
+  "title": "Design System: Erik Taylor — Portfolio",
+  "extensions": {
+    "colorMeta": {
+      "paper": {
+        "role": "neutral",
+        "displayName": "Paper",
+        "canonical": "#ffffff",
+        "tonalRamp": [
+          "#262626",
+          "#424242",
+          "#5e5e5e",
+          "#7a7a7a",
+          "#969696",
+          "#b2b2b2",
+          "#d4d4d4",
+          "#f2f2f2"
+        ]
+      },
+      "paper-2": {
+        "role": "neutral",
+        "displayName": "Second Stock",
+        "canonical": "#f1f1ef",
+        "tonalRamp": [
+          "#292924",
+          "#47473e",
+          "#656558",
+          "#838372",
+          "#9d9d8f",
+          "#b8b8ad",
+          "#d7d7d1",
+          "#f3f3f1"
+        ]
+      },
+      "key": {
+        "role": "neutral",
+        "displayName": "Key",
+        "canonical": "#16161a",
+        "tonalRamp": [
+          "#232329",
+          "#3d3d48",
+          "#565666",
+          "#707085",
+          "#8e8e9f",
+          "#acacb9",
+          "#d0d0d7",
+          "#f1f1f3"
+        ]
+      },
+      "key-2": {
+        "role": "neutral",
+        "displayName": "Key Secondary",
+        "canonical": "#4a4a52",
+        "tonalRamp": [
+          "#242428",
+          "#3f3f46",
+          "#5a5a63",
+          "#747481",
+          "#91919c",
+          "#afafb6",
+          "#d1d1d6",
+          "#f2f2f3"
+        ]
+      },
+      "key-rule": {
+        "role": "neutral",
+        "displayName": "Key Rule",
+        "canonical": "#d6d6d2",
+        "tonalRamp": [
+          "#282824",
+          "#45453f",
+          "#63635a",
+          "#808075",
+          "#9b9b92",
+          "#b6b6af",
+          "#d6d6d2",
+          "#f3f3f2"
+        ]
+      },
+      "field": {
+        "role": "primary",
+        "displayName": "Federal Blue",
+        "canonical": "#3d5588",
+        "tonalRamp": [
+          "#182135",
+          "#29395c",
+          "#3a5182",
+          "#4c6aa9",
+          "#6f88be",
+          "#95a8d0",
+          "#c3cee4",
+          "#edf1f7"
+        ]
+      },
+      "field-deep": {
+        "role": "primary",
+        "displayName": "Deep Field",
+        "canonical": "#2b3c62",
+        "tonalRamp": [
+          "#172135",
+          "#28385c",
+          "#3a5083",
+          "#4b68aa",
+          "#6e87bf",
+          "#95a7d0",
+          "#c3cde5",
+          "#edf0f7"
+        ]
+      },
+      "signal": {
+        "role": "secondary",
+        "displayName": "Fluorescent Pink",
+        "canonical": "#ff48b0",
+        "tonalRamp": [
+          "#4c002b",
+          "#85004b",
+          "#bd006b",
+          "#f5008b",
+          "#ff2ea5",
+          "#ff66bd",
+          "#ffa8da",
+          "#ffe5f4"
+        ]
+      },
+      "field-type": {
+        "role": "neutral",
+        "displayName": "Field Type",
+        "canonical": "#c3cde4",
+        "tonalRamp": [
+          "#182135",
+          "#29385b",
+          "#3b5082",
+          "#4c68a9",
+          "#6f87be",
+          "#95a7d0",
+          "#c3cde4",
+          "#edf0f7"
+        ]
+      },
+      "overprint-type": {
+        "role": "neutral",
+        "displayName": "Overprint Type",
+        "canonical": "#e6d6ea",
+        "tonalRamp": [
+          "#2e1a33",
+          "#4f2d58",
+          "#71407d",
+          "#9253a2",
+          "#ab75b8",
+          "#c19acb",
+          "#dcc6e2",
+          "#f5eef6"
+        ]
+      },
+      "signal-deep": {
+        "role": "secondary",
+        "displayName": "Deep Signal",
+        "canonical": "#a3006a",
+        "tonalRamp": [
+          "#4c0032",
+          "#850056",
+          "#bd007b",
+          "#f5009f",
+          "#ff2eb6",
+          "#ff66c9",
+          "#ffa8e1",
+          "#ffe5f6"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "The page claim. One per document, capped at 18ch so it lands in three lines."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Section headings. Larger on contact, smaller inside case-study prose."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Impression titles on the proof sheet; the pull's margin title runs one step up."
+      },
+      "subhead": {
+        "displayName": "Subhead",
+        "purpose": "The one heading level set in the body face — sub-steps inside case-study sections."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Prose at a 68ch measure; ledes and captions narrow to 58ch."
+      },
+      "small": {
+        "displayName": "Small",
+        "purpose": "Impression descriptions, endorsements, nav, buttons, social links."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Status markers and decision terms — the only uppercase in the system."
+      }
+    },
+    "shadows": [
+      {
+        "name": "misregistration-paper",
+        "value": "3px 3px 0 #3d5588",
+        "purpose": "Buttons on paper. Paired with translate(-2px,-2px). Not a shadow — a second ink plate printed out of register."
+      },
+      {
+        "name": "misregistration-field",
+        "value": "3px 3px 0 #ffffff",
+        "purpose": "Impression plates on the deep field ground, where the offset must be paper rather than field to read."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease",
+        "value": "cubic-bezier(0.16, 1, 0.3, 1)",
+        "purpose": "The house exponential ease-out. Every transition and both keyframe animations use it; there is no second easing."
+      },
+      {
+        "name": "slip",
+        "value": "transform 0.25s / box-shadow 0.25s",
+        "purpose": "Misregistration on approach for buttons and impression plates."
+      },
+      {
+        "name": "rule-thicken",
+        "value": "background-size 0.35s",
+        "purpose": "A title's resting 1px underline thickening to 3px on hover and focus-visible."
+      },
+      {
+        "name": "registration",
+        "value": "1.15s both — ghost slips from translate3d(-11px,7px,0) at 0.85 opacity to none; plate settles from translate3d(4px,-3px,0)",
+        "purpose": "The one authored moment, on the pulled homepage plate only. Played once by an IntersectionObserver over an already-finished page."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "phone",
+        "value": "720px"
+      },
+      {
+        "name": "case-pairs",
+        "value": "820px"
+      },
+      {
+        "name": "overprint-split",
+        "value": "860px"
+      },
+      {
+        "name": "split",
+        "value": "900px"
+      },
+      {
+        "name": "sheet",
+        "value": "960px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button",
+      "description": "The only button in the system. Signal ground, key text, square, and it slips out of register on approach.",
+      "html": "<a class=\"ds-btn\" href=\"#\">Resume</a>",
+      "css": ".ds-btn{display:inline-block;background:var(--signal,#ff48b0);color:var(--key,#16161a);font-family:var(--text,Archivo,system-ui,sans-serif);font-weight:700;font-size:0.9375rem;letter-spacing:-0.01em;text-decoration:none;padding:0.6rem 1.1rem;border:1px solid var(--key,#16161a);border-radius:0;transition:transform 0.25s var(--ease,cubic-bezier(0.16,1,0.3,1)),box-shadow 0.25s var(--ease,cubic-bezier(0.16,1,0.3,1));}.ds-btn:hover,.ds-btn:focus-visible{transform:translate(-2px,-2px);box-shadow:3px 3px 0 var(--field,#3d5588);}.ds-btn:focus-visible{outline:3px solid var(--signal,#ff48b0);outline-offset:3px;}"
+    },
+    {
+      "name": "Large Button",
+      "kind": "button",
+      "refersTo": "button-lg",
+      "description": "The same button at reading size, used for Email me and the closing actions.",
+      "html": "<a class=\"ds-btn ds-btn-lg\" href=\"#\">Email me</a>",
+      "css": ".ds-btn{display:inline-block;background:var(--signal,#ff48b0);color:var(--key,#16161a);font-family:var(--text,Archivo,system-ui,sans-serif);font-weight:700;font-size:0.9375rem;letter-spacing:-0.01em;text-decoration:none;padding:0.6rem 1.1rem;border:1px solid var(--key,#16161a);border-radius:0;transition:transform 0.25s var(--ease,cubic-bezier(0.16,1,0.3,1)),box-shadow 0.25s var(--ease,cubic-bezier(0.16,1,0.3,1));}.ds-btn:hover,.ds-btn:focus-visible{transform:translate(-2px,-2px);box-shadow:3px 3px 0 var(--field,#3d5588);}.ds-btn:focus-visible{outline:3px solid var(--signal,#ff48b0);outline-offset:3px;}.ds-btn-lg{font-size:1.0625rem;padding:0.85rem 1.6rem;}"
+    },
+    {
+      "name": "Plate",
+      "kind": "card",
+      "refersTo": "plate",
+      "description": "The unit of imagery. A field-ink mat with a key frame and a multiply dot screen; the ink owns the mat, never the artwork.",
+      "html": "<div class=\"ds-plate\"><img src=\"data:image/svg+xml;utf8,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 320 200%22%3E%3Crect width=%22320%22 height=%22200%22 fill=%22%23e9e9e6%22/%3E%3Crect x=%2216%22 y=%2216%22 width=%22288%22 height=%2228%22 fill=%22%23c9c9c4%22/%3E%3Crect x=%2216%22 y=%2260%22 width=%22132%22 height=%22124%22 fill=%22%23d8d8d4%22/%3E%3Crect x=%22164%22 y=%2260%22 width=%22140%22 height=%2256%22 fill=%22%23d8d8d4%22/%3E%3Crect x=%22164%22 y=%22128%22 width=%22140%22 height=%2256%22 fill=%22%23d8d8d4%22/%3E%3C/svg%3E\" alt=\"Interface screenshot\" width=\"320\" height=\"200\"></div>",
+      "css": ".ds-plate{position:relative;background:var(--field,#3d5588);border:1px solid var(--key,#16161a);padding:clamp(0.75rem,1.7vw,1.5rem);isolation:isolate;}.ds-plate img{display:block;width:100%;height:auto;border:1px solid rgba(0,0,0,0.35);filter:grayscale(0.35) contrast(1.04);}.ds-plate::after{content:'';position:absolute;inset:0;background-image:radial-gradient(circle at center,rgba(0,0,0,0.55) 30%,transparent 32%);background-size:5px 5px;mix-blend-mode:multiply;opacity:0.2;pointer-events:none;}"
+    },
+    {
+      "name": "Plate — Signal Mat",
+      "kind": "card",
+      "refersTo": "plate-signal",
+      "description": "The pink mat. Used exactly once on the whole site, behind the concept Erik actually chose — it is an argument, not decoration.",
+      "html": "<div class=\"ds-plate ds-plate-signal\"><img src=\"data:image/svg+xml;utf8,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 320 200%22%3E%3Crect width=%22320%22 height=%22200%22 fill=%22%23e9e9e6%22/%3E%3Crect x=%2216%22 y=%2216%22 width=%22288%22 height=%2228%22 fill=%22%23c9c9c4%22/%3E%3Crect x=%2216%22 y=%2260%22 width=%22288%22 height=%22124%22 fill=%22%23d8d8d4%22/%3E%3C/svg%3E\" alt=\"The chosen concept\" width=\"320\" height=\"200\"></div>",
+      "css": ".ds-plate{position:relative;background:var(--field,#3d5588);border:1px solid var(--key,#16161a);padding:clamp(0.75rem,1.7vw,1.5rem);isolation:isolate;}.ds-plate img{display:block;width:100%;height:auto;border:1px solid rgba(0,0,0,0.35);filter:grayscale(0.35) contrast(1.04);}.ds-plate::after{content:'';position:absolute;inset:0;background-image:radial-gradient(circle at center,rgba(0,0,0,0.55) 30%,transparent 32%);background-size:5px 5px;mix-blend-mode:multiply;opacity:0.2;pointer-events:none;}.ds-plate-signal{background:var(--signal,#ff48b0);}"
+    },
+    {
+      "name": "Impression",
+      "kind": "custom",
+      "refersTo": "plate",
+      "description": "One of the three uniform frames on the proof sheet: cropped plate, title with a resting rule, description, and a two-row annotation. Sits on the deep field ground.",
+      "html": "<div class=\"ds-impression-ground\"><article class=\"ds-impression\"><figure class=\"ds-impression-fig\"><a class=\"ds-plate-link\" href=\"#\" tabindex=\"-1\"><div class=\"ds-plate ds-plate-crop\"><img src=\"data:image/svg+xml;utf8,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 320 200%22%3E%3Crect width=%22320%22 height=%22200%22 fill=%22%23e9e9e6%22/%3E%3Crect x=%2216%22 y=%2216%22 width=%22288%22 height=%2224%22 fill=%22%23c9c9c4%22/%3E%3Crect x=%2216%22 y=%2256%22 width=%22288%22 height=%22128%22 fill=%22%23d8d8d4%22/%3E%3C/svg%3E\" alt=\"Concept 2 of the agent portal navigation\" width=\"320\" height=\"200\"></div></a></figure><h3 class=\"ds-impression-title\"><a href=\"#\">Structural change vs. familiarity: a navigation tradeoff</a></h3><p class=\"ds-impression-desc\">Research surfaced a better concept agents weren't sure they liked. I chose the structural fix over the familiar one.</p><p class=\"ds-annot\"><span class=\"ds-status\">Data pending</span><span class=\"ds-tag\">UX research · Usability testing</span></p></article></div>",
+      "css": ".ds-plate{position:relative;background:var(--field,#3d5588);border:1px solid var(--key,#16161a);padding:clamp(0.75rem,1.7vw,1.5rem);isolation:isolate;}.ds-plate img{display:block;width:100%;height:auto;border:1px solid rgba(0,0,0,0.35);filter:grayscale(0.35) contrast(1.04);}.ds-plate::after{content:'';position:absolute;inset:0;background-image:radial-gradient(circle at center,rgba(0,0,0,0.55) 30%,transparent 32%);background-size:5px 5px;mix-blend-mode:multiply;opacity:0.2;pointer-events:none;}.ds-impression-ground{background:var(--field-deep,#2b3c62);padding:2rem;max-width:380px;}.ds-impression{font-family:var(--text,Archivo,system-ui,sans-serif);}.ds-impression-fig{margin:0;}.ds-plate-link{display:block;text-decoration:none;}.ds-plate-crop img{aspect-ratio:16/10;object-fit:cover;object-position:top center;}.ds-impression .ds-plate{transition:none;}@media (prefers-reduced-motion:no-preference){.ds-impression .ds-plate{transition:transform 0.25s var(--ease,cubic-bezier(0.16,1,0.3,1)),box-shadow 0.25s var(--ease,cubic-bezier(0.16,1,0.3,1));}}.ds-impression:hover .ds-plate,.ds-impression:focus-within .ds-plate{transform:translate(-2px,-2px);box-shadow:3px 3px 0 var(--paper,#ffffff);}.ds-impression-title{font-family:var(--display,'Archivo Black',system-ui,sans-serif);font-weight:400;letter-spacing:-0.03em;line-height:1.05;font-size:1.375rem;text-wrap:balance;margin:1.25rem 0 0;color:#fff;}.ds-impression-title a{color:inherit;text-decoration:none;background-image:linear-gradient(var(--paper,#fff),var(--paper,#fff));background-repeat:no-repeat;background-position:0 100%;background-size:100% 1px;transition:background-size 0.35s var(--ease,cubic-bezier(0.16,1,0.3,1));}.ds-impression-title a:hover,.ds-impression-title a:focus-visible{background-size:100% 3px;}.ds-impression-desc{margin:0.85rem 0 0;font-size:0.9375rem;line-height:1.6;color:#c3cde4;text-wrap:pretty;}.ds-annot{margin:1.25rem 0 0;display:grid;justify-items:start;gap:0.5rem;font-size:0.8125rem;}.ds-status{font-weight:700;font-size:0.75rem;letter-spacing:0.06em;text-transform:uppercase;padding:0.2rem 0.5rem;border:1px solid currentColor;border-radius:0;color:var(--paper,#fff);}.ds-tag{color:#c3cde4;}.ds-impression a:focus-visible{outline:3px solid var(--signal,#ff48b0);outline-offset:3px;}"
+    },
+    {
+      "name": "Status Markers",
+      "kind": "chip",
+      "refersTo": "status-shipped",
+      "description": "The honest-status marks. Shipped in field ink, Data pending in Deep Signal; on the field ground both go white and the words carry the distinction.",
+      "html": "<p class=\"ds-statusrow\"><span class=\"ds-status ds-status-shipped\">Shipped</span><span class=\"ds-status ds-status-open\">Data pending</span></p>",
+      "css": ".ds-statusrow{margin:0;display:flex;flex-wrap:wrap;gap:0.5rem 1rem;align-items:center;font-family:var(--text,Archivo,system-ui,sans-serif);}.ds-status{font-weight:700;font-size:0.75rem;letter-spacing:0.06em;text-transform:uppercase;padding:0.2rem 0.5rem;border:1px solid currentColor;border-radius:0;}.ds-status-shipped{color:var(--field,#3d5588);}.ds-status-open{color:#a3006a;}"
+    },
+    {
+      "name": "Masthead Navigation",
+      "kind": "nav",
+      "description": "Sticky paper bar under a key rule. Wordmark in the display face with a field-ink period, three text links with a fill-in underline, and the resume button.",
+      "html": "<header class=\"ds-masthead\"><div class=\"ds-masthead-inner\"><a class=\"ds-wordmark\" href=\"#\">Erik Taylor<span>.</span></a><nav class=\"ds-nav\" aria-label=\"Sections\"><a href=\"#\">Work</a><a href=\"#\">Background</a><a href=\"#\">Contact</a></nav><a class=\"ds-btn\" href=\"#\">Resume</a></div></header>",
+      "css": ".ds-btn{display:inline-block;background:var(--signal,#ff48b0);color:var(--key,#16161a);font-family:var(--text,Archivo,system-ui,sans-serif);font-weight:700;font-size:0.9375rem;letter-spacing:-0.01em;text-decoration:none;padding:0.6rem 1.1rem;border:1px solid var(--key,#16161a);border-radius:0;transition:transform 0.25s var(--ease,cubic-bezier(0.16,1,0.3,1)),box-shadow 0.25s var(--ease,cubic-bezier(0.16,1,0.3,1));}.ds-btn:hover,.ds-btn:focus-visible{transform:translate(-2px,-2px);box-shadow:3px 3px 0 var(--field,#3d5588);}.ds-btn:focus-visible{outline:3px solid var(--signal,#ff48b0);outline-offset:3px;}.ds-masthead{background:var(--paper,#fff);border-bottom:1px solid var(--key,#16161a);font-family:var(--text,Archivo,system-ui,sans-serif);color:var(--key,#16161a);}.ds-masthead-inner{display:flex;align-items:center;gap:1.5rem;min-height:64px;padding-inline:1.25rem;}.ds-wordmark{font-family:var(--display,'Archivo Black',system-ui,sans-serif);font-size:1.0625rem;letter-spacing:-0.02em;text-decoration:none;color:inherit;margin-right:auto;}.ds-wordmark span{color:var(--field,#3d5588);}.ds-nav{display:flex;gap:1.75rem;}.ds-nav a{color:inherit;font-size:0.9375rem;font-weight:500;text-decoration:none;padding-block:0.25rem;border-bottom:2px solid transparent;transition:border-color 0.2s var(--ease,cubic-bezier(0.16,1,0.3,1));}.ds-nav a:hover{border-bottom-color:var(--field,#3d5588);}.ds-nav a:focus-visible{outline:3px solid var(--signal,#ff48b0);outline-offset:3px;}"
+    },
+    {
+      "name": "Work History Row",
+      "kind": "custom",
+      "description": "The tenure ledger: role left, dates right in tabular figures, divided by quiet hairlines with the first suppressed.",
+      "html": "<ul class=\"ds-history\"><li><b>Freelance Product Designer</b> <time>2026 — present</time></li><li><b>Product Designer, Tovuti LMS</b> <time>2025 — 2026</time></li><li><b>UX Designer, Transamerica</b> <time>2020 — 2024</time></li></ul>",
+      "css": ".ds-history{list-style:none;margin:0;padding:0;font-family:var(--text,Archivo,system-ui,sans-serif);font-size:1.0625rem;line-height:1.65;color:var(--key,#16161a);}.ds-history li{display:flex;flex-wrap:wrap;justify-content:space-between;gap:0.5rem 1.5rem;padding-block:0.85rem;border-top:1px solid var(--key-rule,#d6d6d2);}.ds-history li:first-child{border-top:0;}.ds-history b{font-weight:600;}.ds-history time{color:var(--key-2,#4a4a52);font-variant-numeric:tabular-nums;font-size:0.9375rem;}"
+    },
+    {
+      "name": "Overprint Contact Band",
+      "kind": "custom",
+      "description": "The one place two inks actually cross: a signal layer multiplied over the field ground so the overlap resolves to a real third colour (#3d185e).",
+      "html": "<section class=\"ds-overprint\"><div class=\"ds-overprint-in\"><h2>Design is how I make sense of hard problems.</h2><p class=\"ds-overprint-intro\">AI is how I'm staying ahead of them.</p><p class=\"ds-overprint-actions\"><a class=\"ds-btn ds-btn-lg\" href=\"#\">erikftaylor@gmail.com</a></p></div></section>",
+      "css": ".ds-btn{display:inline-block;background:var(--signal,#ff48b0);color:var(--key,#16161a);font-family:var(--text,Archivo,system-ui,sans-serif);font-weight:700;font-size:0.9375rem;letter-spacing:-0.01em;text-decoration:none;padding:0.6rem 1.1rem;border:1px solid var(--key,#16161a);border-radius:0;transition:transform 0.25s var(--ease,cubic-bezier(0.16,1,0.3,1)),box-shadow 0.25s var(--ease,cubic-bezier(0.16,1,0.3,1));}.ds-btn:hover,.ds-btn:focus-visible{transform:translate(-2px,-2px);box-shadow:3px 3px 0 var(--field,#3d5588);}.ds-btn:focus-visible{outline:3px solid var(--signal,#ff48b0);outline-offset:3px;}.ds-btn-lg{font-size:1.0625rem;padding:0.85rem 1.6rem;}.ds-overprint{position:relative;background:var(--field,#3d5588);color:var(--paper,#fff);border-top:1px solid var(--key,#16161a);isolation:isolate;font-family:var(--text,Archivo,system-ui,sans-serif);}.ds-overprint::before{content:'';position:absolute;inset:0 34% 0 0;background:var(--signal,#ff48b0);mix-blend-mode:multiply;z-index:0;pointer-events:none;}.ds-overprint-in{position:relative;z-index:1;padding:2.5rem 1.5rem;}.ds-overprint h2{font-family:var(--display,'Archivo Black',system-ui,sans-serif);font-weight:400;letter-spacing:-0.03em;line-height:0.98;text-wrap:balance;font-size:clamp(2rem,5.5vw,4rem);max-width:18ch;margin:0;}.ds-overprint-intro{margin:1.25rem 0 0;max-width:68ch;color:#e6d6ea;}.ds-overprint-actions{margin:2.25rem 0 0;}@media (max-width:860px){.ds-overprint::before{inset:0 0 42% 0;}}"
+    }
+  ],
+  "narrative": {
+    "northStar": "Riso Studio",
+    "overview": "Risograph duplicator printing, taken as a production craft rather than a conceit. The site does not pretend to be a printed object. It is coloured and composed the way one is: a small closed set of inks, each laid down for a reason, none of them blended into gradients; a coarse dot screen over the whole sheet; and misregistration — the slip of a second plate against the first — as the only physical event in the world. The metaphor was accepted on the third direction roll after eight metaphor-led worlds were declined, and it survives because it is a description of how the page is made, not what it is about.\n\nThe homepage is a proof sheet with one pull. The body of work is laid on a single sheet and exactly one impression is enlarged; hierarchy comes from which frame was pulled, never from card size. Below the pull, three impressions are deliberately uniform — that is what a proof sheet is for, and the comparison only works if the frames match. The case study is the same world at reading density: poster-scale headline, a dek, engagement facts on a rule, then long prose in a single measure with plates interleaved.\n\nDensity is high in type and low in ornament. There is no radius anywhere in the stylesheet, no shadow used as depth, no gradient, no icon, and no decorative container. Rules and ground changes do all the dividing. The visual anti-reference is the ranked run of identical project cards, and it is refused structurally: the build has no card component at all.",
+    "keyCharacteristics": [
+      "Three inks on paper, with functional roles that are enforced rather than suggested",
+      "Zero corner radius, zero blur, zero gradient — every edge is a printed edge",
+      "Type is set in two Archivo cuts and nothing else, self-hosted, no external requests",
+      "Full-viewport 5px dot screen over the entire page, including the sticky masthead",
+      "Misregistration (an opaque hard-offset second plate) is the world's only interaction device",
+      "Exactly one authored motion moment on the whole site",
+      "Imagery is proof and stays legible: the ink colours the mat, never the artwork"
+    ],
+    "rules": [
+      {
+        "name": "The Pink Cannot Speak Rule",
+        "section": "colors",
+        "body": "Fluorescent pink measures 3.09:1 on white. It can never carry body text and never sits under white type. Where it is a button it takes key text. Where the meaning needs pink as type, use Deep Signal (#a3006a) instead — that substitution is why the “Data pending” marker exists in two different colours in two different regions and is correct in both."
+      },
+      {
+        "name": "The Three-Ink Rule",
+        "section": "colors",
+        "body": "Paper, key, field, signal. A fourth ink (yellow) was introduced during an earlier fix pass and then removed: retiring a dead token by finding it a job adds an ink the world never named. If a new state needs a colour, it is a value of an existing ink, not a new one."
+      },
+      {
+        "name": "The Ground Does Not Speak Rule",
+        "section": "colors",
+        "body": "A colour that owns a region does not also set type inside it. On the deep field, type is white or Field Type. On the overprint, type is white or Overprint Type. Federal Blue never sets type on a Federal Blue ground."
+      },
+      {
+        "name": "The Two Cuts Rule",
+        "section": "typography",
+        "body": "Archivo Black for headings, Archivo for everything else. No third family, no italic (the emphasis in the lead claim is font-style: normal recoloured to field ink), and no system display face as a substitute."
+      },
+      {
+        "name": "The Balanced Block Rule",
+        "section": "typography",
+        "body": "Every heading carries text-wrap: balance and a ch max-width. A headline that ragged-rights into a one-word orphan line has failed as a printed block regardless of how it measures."
+      },
+      {
+        "name": "The Ruled Gap Rule",
+        "section": "layout",
+        "body": "Column rules are struck in the gap (inset-inline-start: calc(var(--sheet-gap) / -2)), at 1px, and only between siblings. Nothing on the sheet is enclosed on four sides. A ruled gap divides; a box encloses, and an enclosed frame is a card."
+      },
+      {
+        "name": "The Anchor Clearance Rule",
+        "section": "layout",
+        "body": "scroll-padding-top is 5rem, and 7.5rem below 720px where the masthead wraps to three rows. The masthead sticks, so an anchor jump must stop short of it — otherwise every section heading parks underneath the header it just scrolled past, and a keyboard user tabbing back up lands behind it."
+      },
+      {
+        "name": "The Second Plate Rule",
+        "section": "elevation",
+        "body": "An offset is legitimate only if it reads as a second ink plate: opaque, hard-edged, zero blur, and set in a palette colour that contrasts with the ground it sits on. A black, blurred, translucent, or grey offset is a drop shadow wearing the world's clothes and is refused."
+      }
+    ],
+    "dos": [
+      "Do let a colour own either a region or the type in it, never both.",
+      "Do spend the signal once per section, on the single action that matters.",
+      "Do use Deep Signal (#a3006a) when pink has to be read rather than clicked.",
+      "Do rule the gap between siblings instead of boxing each one.",
+      "Do state hierarchy by enlargement — pull one frame; keep the rest uniform.",
+      "Do cut imagery per breakpoint when a CSS crop would cost legible content, and ship it through <picture> with intrinsic width/height on both sources.",
+      "Do wrap plates in a tabindex=\"-1\" anchor so the frame is a pointer target while the heading keeps the tab stop and the image keeps its alt.",
+      "Do give a link a resting rule that thickens on approach, rather than one that appears from nothing.",
+      "Do gate a hover transition behind prefers-reduced-motion: no-preference and leave the state change itself ungated.",
+      "Do keep the dot screen above every layer including the sticky masthead, and move it onto the inner sheet inside any scroll container."
+    ],
+    "donts": [
+      "Don't introduce a fourth ink. If a new state needs colour, derive a value of an existing one.",
+      "Don't set body text on the signal, or white type over it — it is 3.09:1 on white.",
+      "Don't add a border-radius anywhere. The build has none, site-wide.",
+      "Don't use a blurred, black, or translucent shadow. The only legal offset is an opaque 3px 3px 0 in a palette ink, and it means misregistration.",
+      "Don't give the pulled plate the hover slip. The asymmetry against the three uniform frames is what marks it as the pull.",
+      "Don't build a same-size card grid as page structure, or enclose an entry on four sides.",
+      "Don't use kickers, eyebrows, section numbers, gradient text, glass, glyph icons, or a system display face. Social links are set as words, not icons — a type-led print world has no icon system and should not borrow one.",
+      "Don't hide content at opacity: 0 awaiting script. Animate arrivals on top of a page that is already complete.",
+      "Don't state availability as a banner or badge. It is stated once, quietly, in the contact section.",
+      "Don't crop a research board or a wide nav strip. Pan it at a fixed width and make the container keyboard-reachable."
+    ]
+  }
+}

@@ -45,6 +45,16 @@
 html {
   -webkit-text-size-adjust: 100%;
   scroll-behavior: smooth;
+  /* The masthead sticks, so an anchor jump has to stop short of it — otherwise
+     every section heading parks underneath the header it scrolled past, and a
+     keyboard user tabbing back up lands behind it. */
+  scroll-padding-top: 5rem;
+}
+
+@media (max-width: 720px) {
+  html {
+    scroll-padding-top: 7.5rem;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -155,8 +165,44 @@ img {
   margin-right: auto;
 }
 
+/* The period is the sheet's registration dot. At rest the two passes are in
+   perfect register and it reads as an ordinary full stop; approach the
+   wordmark and the signal plate slips, the way a sheet shifts under the drum.
+   Nothing depends on finding it. */
 .wordmark span {
   color: var(--field);
+  position: relative;
+  display: inline-block;
+}
+
+.wordmark span::before {
+  content: '.';
+  position: absolute;
+  inset: 0;
+  color: var(--signal);
+  mix-blend-mode: multiply;
+  opacity: 0;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .wordmark span::before {
+    transition: opacity 0.2s var(--ease), transform 0.25s var(--ease);
+  }
+}
+
+.wordmark:hover span::before,
+.wordmark:focus-visible span::before {
+  opacity: 1;
+  transform: translate(-2px, 1px);
+}
+
+/* Ink, not the browser's blue. A reviewer quoting a line into a forward is the
+   behaviour this site is built to earn, so the selection is set in the world:
+   signal ground, key type, the one pairing the palette allows. */
+::selection {
+  background: var(--signal);
+  color: var(--key);
 }
 
 .masthead nav {
@@ -205,7 +251,13 @@ img {
   text-decoration: none;
   padding: 0.6rem 1.1rem;
   border: 1px solid var(--key);
-  transition: transform 0.25s var(--ease), box-shadow 0.25s var(--ease);
+}
+
+/* The slip still happens under reduced motion; only its animation stops. */
+@media (prefers-reduced-motion: no-preference) {
+  .btn {
+    transition: transform 0.25s var(--ease), box-shadow 0.25s var(--ease);
+  }
 }
 
 /* Misregistration: the second plate slips out of register on approach. */
@@ -257,6 +309,12 @@ img {
 .plate--deep {
   background: var(--field-deep);
 }
+
+/* The pulled impression is a detail, cut to the width it will actually be
+   printed at. An enlargement that shows the whole board resolves the tool's
+   own type to four pixels — size without information, which is the one thing
+   the pull cannot be. Both sources are pre-cut and shown whole: three stage
+   columns on the desktop plate, one on the phone. */
 
 /* Entry plates share one aspect so the run has a rhythm; the artwork is
    cropped from the top, where interface content actually lives. */
@@ -332,50 +390,75 @@ figcaption {
   max-width: 58ch;
 }
 
-/* --------------------------------------------------------------------- hero */
+/* --------------------------------------------------------------------- lead */
 
-.hero {
-  padding-block: clamp(3.5rem, 9vw, 7rem) clamp(3rem, 7vw, 5.5rem);
+/* The sheet opens with the claim, then pulls one impression at eight columns
+   with its annotation in the margin beside it. The claim is sized to land in
+   three lines so the top of the pull is already on screen. */
+.lead {
+  padding-block: clamp(3rem, 7vw, 5rem) clamp(3rem, 7vw, 5.5rem);
 }
 
-.hero h1 {
-  font-size: clamp(2.75rem, 7.6vw, 6rem);
-  max-width: 16ch;
+.lead h1 {
+  font-size: clamp(2.75rem, 6.4vw, 5.5rem);
+  max-width: 18ch;
 }
 
-.hero h1 em {
+.lead h1 em {
   font-style: normal;
   color: var(--field);
 }
 
-.hero__lede {
+.lead__head {
   margin-top: clamp(1.5rem, 3vw, 2.25rem);
+  display: grid;
+  gap: 1.75rem;
+  justify-items: start;
+}
+
+@media (min-width: 900px) {
+  .lead__head {
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 3rem;
+  }
+}
+
+.lead__lede {
   max-width: 58ch;
-  font-size: clamp(1.0625rem, 1.5vw, 1.25rem);
+  font-size: clamp(1.0625rem, 1.5vw, 1.1875rem);
   line-height: 1.6;
   color: var(--key-2);
 }
 
-.hero__actions {
-  margin-top: 2rem;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 1.25rem;
+.lead__sheet {
+  margin-top: clamp(1.75rem, 4.5vw, 3.25rem);
+  padding-top: clamp(1.75rem, 4.5vw, 3.25rem);
+  border-top: 1px solid var(--key);
+  display: grid;
+  gap: clamp(1.75rem, 3vw, 2.5rem);
+  align-items: start;
 }
 
-.hero__status {
+@media (min-width: 960px) {
+  .lead__sheet {
+    grid-template-columns: minmax(0, 8fr) minmax(0, 4fr);
+    gap: clamp(2rem, 3.4vw, 3.25rem);
+  }
+}
+
+.lead__margin h2 {
+  font-size: clamp(1.375rem, 2.1vw, 1.75rem);
+  line-height: 1.05;
+  max-width: 24ch;
+}
+
+.lead__margin p {
+  margin-top: 1rem;
+  max-width: 46ch;
   font-size: 0.9375rem;
+  line-height: 1.6;
   color: var(--key-2);
-}
-
-.hero__status b {
-  color: var(--key);
-  font-weight: 600;
-}
-
-.hero__plate {
-  margin-top: clamp(2.5rem, 6vw, 4.5rem);
 }
 
 /* ------------------------------------------------------------------ section */
@@ -410,68 +493,138 @@ figcaption {
   color: #c3cde4;
 }
 
-/* -------------------------------------------------------------------- work */
+/* ------------------------------------------------------------------- sheet */
 
-.work {
+/* The rest of the run, pulled together on one sheet for comparison. The three
+   frames are uniform on purpose — that is what a proof sheet is for — and the
+   hierarchy is carried by the enlargement above them, not by frame size. */
+.sheet {
+  --sheet-gap: clamp(2.5rem, 4.4vw, 4rem);
   margin-top: clamp(2.5rem, 5vw, 4rem);
   display: grid;
-  gap: clamp(2.5rem, 5vw, 4.5rem);
+  gap: clamp(2.5rem, 4vw, 3rem);
 }
 
-.entry {
-  display: grid;
-  gap: clamp(1.25rem, 3vw, 2.5rem);
-  align-items: start;
-}
-
-@media (min-width: 900px) {
-  .entry {
-    grid-template-columns: minmax(0, 7fr) minmax(0, 5fr);
+@media (min-width: 960px) {
+  .sheet {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    column-gap: var(--sheet-gap);
+    row-gap: 0;
   }
 
-  /* Flipping swaps the sides, never the proportions: the artwork keeps the
-     wide column in every entry. */
-  .entry--flip {
-    grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+  /* The rows let the annotation rule straight across the sheet however many
+     lines a title takes, so the three states compare in one glance. */
+  .impression {
+    position: relative;
+    display: grid;
+    grid-template-rows: auto auto 1fr auto;
   }
 
-  .entry--flip .entry__body {
-    order: -1;
+  /* Column rules, the way a sheet is ruled — struck in the gap so every frame
+     keeps the same width. Not card edges: nothing encloses an impression on
+     four sides. */
+  .impression + .impression::before {
+    content: '';
+    position: absolute;
+    inset-block: 0;
+    inset-inline-start: calc(var(--sheet-gap) / -2);
+    border-inline-start: 1px solid rgba(255, 255, 255, 0.26);
   }
 }
 
-.entry__body h3 {
-  font-size: clamp(1.5rem, 2.4vw, 2rem);
-  line-height: 1.02;
+.impression h3 {
+  margin-top: 1.25rem;
+  font-size: clamp(1.25rem, 1.9vw, 1.5rem);
+  line-height: 1.05;
 }
 
-.entry__body h3 a {
+/* The frame is a target as well as the heading — a phone has no hover to
+   discover that the plate was clickable all along. A real anchor around the
+   plate, not an overlay laid across the card: the overlay swallowed the
+   description, and those are the sentences a reviewer selects to forward.
+   Hidden from assistive tech and from the tab order, because the heading
+   beside it already announces the same destination. */
+.plate-link {
+  display: block;
+  text-decoration: none;
+}
+
+/* Misregistration on approach — the world's own device, the same slip the
+   buttons make, so the sheet answers the pointer in the page's language
+   instead of staying inert. */
+.impression .plate {
+  transition: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .impression .plate {
+    transition: transform 0.25s var(--ease), box-shadow 0.25s var(--ease);
+  }
+}
+
+.impression:hover .plate,
+.impression:focus-within .plate {
+  transform: translate(-2px, -2px);
+  box-shadow: 3px 3px 0 var(--paper);
+}
+
+.impression p {
+  margin-top: 0.85rem;
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  color: #c3cde4;
+}
+
+/* A title is ruled at rest, because a link that only announces itself on hover
+   announces itself to nobody on a phone. The second pass lands on approach:
+   the rule thickens rather than appearing from nothing. */
+.lead__margin h2 a,
+.impression h3 a {
   text-decoration: none;
   background-image: linear-gradient(var(--field), var(--field));
   background-repeat: no-repeat;
   background-position: 0 100%;
-  background-size: 0% 3px;
-  transition: background-size 0.35s var(--ease);
+  background-size: 100% 1px;
 }
 
-.entry__body h3 a:hover,
-.entry__body h3 a:focus-visible {
+@media (prefers-reduced-motion: no-preference) {
+  .lead__margin h2 a,
+  .impression h3 a {
+    transition: background-size 0.35s var(--ease);
+  }
+}
+
+.impression h3 a {
+  background-image: linear-gradient(var(--paper), var(--paper));
+}
+
+.lead__margin h2 a:hover,
+.lead__margin h2 a:focus-visible,
+.impression h3 a:hover,
+.impression h3 a:focus-visible {
   background-size: 100% 3px;
 }
 
-.entry__bet {
-  margin-top: 1rem;
-  max-width: 46ch;
-  color: var(--key-2);
-}
+/* --------------------------------------------------------------- annotation */
 
-.entry__meta {
+.annot {
   margin-top: 1.25rem;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   gap: 0.5rem 1rem;
   font-size: 0.8125rem;
+}
+
+/* On the sheet only, status takes its own row and the tag sits beneath it.
+   Set as a wrapping line, one card's longer tag pushed its chip out of line
+   and broke the rule the three frames are compared along; two fixed rows
+   cannot drift. The lead margin has no such line to hold, so it keeps the
+   single row and does not spend a second one in the first viewport. */
+.impression .annot {
+  display: grid;
+  justify-items: start;
+  gap: 0.5rem;
 }
 
 .tag {
@@ -493,6 +646,16 @@ figcaption {
 
 .status--open {
   color: #a3006a;
+}
+
+/* On the field the same two states are set in the ground's own light: the words
+   carry the distinction, so neither one depends on colour to be read. */
+.section--field .status {
+  color: var(--paper);
+}
+
+.section--field .tag {
+  color: #c3cde4;
 }
 
 /* --------------------------------------------------------------- background */
@@ -557,42 +720,52 @@ figcaption {
   max-width: 260px;
 }
 
-/* ------------------------------------------------------------- testimonials */
+/* -------------------------------------------------------------- endorsements */
 
-.quotes {
-  margin-top: clamp(2.5rem, 5vw, 4rem);
-  display: grid;
-  gap: clamp(2rem, 4vw, 3rem);
+/* Marginal notes beside the record, not a region of their own: three voices
+   from one employer do not outrank the work in page spend. Each is trimmed to
+   the one sentence that only that person wrote. */
+.ledger__action {
+  margin-top: 2rem;
 }
 
-@media (min-width: 860px) {
-  .quotes {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
+.endorsements {
+  margin-top: clamp(2.5rem, 4vw, 3.25rem);
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--key);
 }
 
-.quotes blockquote {
-  margin: 0;
-  border-top: 3px solid var(--paper);
+.endorsements h3 {
+  font-size: 1.25rem;
+  max-width: 24ch;
+}
+
+.endorsements blockquote {
+  margin: 1.5rem 0 0;
   padding-top: 1.25rem;
+  border-top: 1px solid var(--key-rule);
 }
 
-.quotes p {
-  font-size: 1.0625rem;
-  line-height: 1.6;
+.endorsements blockquote:first-of-type {
+  border-top: 0;
+  padding-top: 0;
 }
 
-.quotes footer {
-  margin-top: 1.25rem;
-  font-size: 0.875rem;
-  color: #c3cde4;
-}
-
-.quotes footer b {
-  display: block;
-  color: var(--paper);
-  font-weight: 600;
+.endorsements p {
   font-size: 0.9375rem;
+  line-height: 1.6;
+  color: var(--key-2);
+}
+
+.endorsements footer {
+  margin-top: 0.65rem;
+  font-size: 0.8125rem;
+  color: var(--key-2);
+}
+
+.endorsements footer b {
+  color: var(--key);
+  font-weight: 600;
 }
 
 /* ----------------------------------------------------------------- contact */
@@ -608,6 +781,13 @@ figcaption {
   flex-wrap: wrap;
   gap: 1.25rem;
   align-items: center;
+}
+
+/* Availability is stated once, here, and never as a badge or a banner. */
+.contact__status {
+  margin-top: 1.75rem;
+  font-size: 0.9375rem;
+  color: #e6d6ea;
 }
 
 .linklist {
@@ -914,5 +1094,219 @@ figcaption {
   }
   100% {
     transform: none;
+  }
+}
+
+/* ------------------------------------------------------------------ print */
+
+/* A site composed like a printed sheet should survive being printed. Reviewers
+   save portfolios to PDF and forward them; this is the version that arrives.
+   The screen world does not transfer literally — a 5px halftone printed on a
+   halftone press moirés, and full-bleed ink fields cost a toner cartridge to
+   say nothing — so the page is re-set for paper: one ink on white, the fields
+   becoming rules, the artwork keeping its frame. */
+@media print {
+  @page {
+    margin: 14mm 15mm;
+  }
+
+  html {
+    scroll-padding-top: 0;
+  }
+
+  body {
+    background: var(--paper);
+    color: var(--key);
+    font-size: 10pt;
+    line-height: 1.45;
+  }
+
+  /* The stock is the actual paper now. */
+  body::before,
+  .plate::after,
+  .plate--pan .pan-sheet::after {
+    display: none;
+  }
+
+  .skip {
+    display: none;
+  }
+
+  /* Printed once, at the top, not stuck to every page. */
+  .masthead {
+    position: static;
+    border-bottom: 1.5pt solid var(--key);
+  }
+
+  .masthead nav,
+  .masthead .btn {
+    display: none;
+  }
+
+  .shell {
+    max-width: none;
+    padding-inline: 0;
+  }
+
+  .section {
+    padding-block: 1.5rem;
+    border-top: 0.5pt solid var(--key-rule);
+  }
+
+  /* Ink fields become rules. White-on-field type would print as white on
+     white the moment a browser drops backgrounds, which is the default. */
+  .section--field,
+  .section--paper,
+  .overprint {
+    background: none;
+    color: var(--key);
+  }
+
+  .overprint::before {
+    display: none;
+  }
+
+  .section--field .section__intro,
+  .overprint .section__intro,
+  .impression p,
+  .contact__status {
+    color: var(--key-2);
+  }
+
+  .section--field .status {
+    color: var(--key);
+  }
+
+  .section--field .tag {
+    color: var(--key-2);
+  }
+
+  .impression h3 a,
+  .lead__margin h2 a {
+    background-image: none;
+  }
+
+  /* The frame survives; the mat does not. */
+  .plate {
+    background: none;
+    border: 0.5pt solid var(--key-2);
+    padding: 4pt;
+  }
+
+  .plate img {
+    filter: none;
+    border-color: var(--key-rule);
+  }
+
+  .lead h1 {
+    font-size: 30pt;
+  }
+
+  .section > .shell > h2 {
+    font-size: 17pt;
+  }
+
+  .contact h2 {
+    font-size: 19pt;
+  }
+
+  .impression h3 {
+    font-size: 13pt;
+  }
+
+  /* Nothing that reads as one unit is allowed to break across a sheet — but
+     the pull is not in that set. Held whole it was too tall to sit under the
+     claim, so it went to sheet two and left sheet one two thirds empty. */
+  .impression,
+  .endorsements blockquote,
+  .history li {
+    break-inside: avoid;
+  }
+
+  /* On paper there is no fold to crop for, so the artwork prints entire and
+     sized to sit with its own heading rather than filling the measure. */
+  .plate--crop img,
+  .plate--lead img {
+    aspect-ratio: auto;
+    object-fit: contain;
+    width: auto;
+    max-width: 100%;
+    max-height: 2.6in;
+    margin-inline: auto;
+  }
+
+  .plate--lead img {
+    max-height: 3.9in;
+  }
+
+  /* A heading stays whole and stays with what it introduces. Held only by
+     break-after, the pull's title split from its own printed URL across the
+     sheet edge. */
+  h1, h2, h3 {
+    break-inside: avoid;
+    break-after: avoid;
+  }
+
+  .lead__margin,
+  .section__intro {
+    break-inside: avoid;
+  }
+
+  .sheet {
+    gap: 1.5rem;
+  }
+
+  /* On paper a link cannot be followed, so it has to be readable. Only the
+     destinations worth typing out are spelled: the case studies and the
+     profiles. Nav anchors and mailto buttons already say what they are. */
+  .impression h3 a::after,
+  .lead__margin h2 a::after {
+    content: 'etaylor.co' attr(href);
+    display: block;
+    margin-top: 0.3rem;
+    font-family: var(--text);
+    font-size: 7.5pt;
+    font-weight: 400;
+    line-height: 1.3;
+    letter-spacing: 0;
+    color: var(--key-2);
+    overflow-wrap: anywhere;
+  }
+
+  .linklist a::after {
+    content: ' (' attr(href) ')';
+    font-size: 8pt;
+    color: var(--key-2);
+    overflow-wrap: anywhere;
+  }
+
+  /* Actions are not clickable on paper; they print as their own address. */
+  .btn {
+    background: none;
+    border: 0;
+    padding: 0;
+    font-weight: 700;
+    text-decoration: underline;
+  }
+
+  /* "Email me" and "Download resume" are instructions to a pointer. On paper
+     each one prints the thing it would have opened. The contact email button
+     is already set as the address itself and needs no suffix. */
+  .lead__head .btn::after {
+    content: ' — erikftaylor@gmail.com';
+    font-weight: 400;
+  }
+
+  .contact__actions .btn[href$=".pdf"]::after {
+    content: ' — etaylor.co' attr(href);
+    font-weight: 400;
+    font-size: 8pt;
+    color: var(--key-2);
+    overflow-wrap: anywhere;
+  }
+
+  .colophon {
+    border-top: 0.5pt solid var(--key-rule);
+    color: var(--key-2);
   }
 }

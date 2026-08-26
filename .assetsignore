@@ -13,3 +13,4 @@ wrangler.toml
 .assetsignore
 package.json
 package-lock.json
+_resume-print.html

@@ -4,9 +4,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Erik Taylor — Product Designer</title>
-<meta name="description" content="Freelance product designer in Denver. 15+ years across IBM, Transamerica, and Tovuti LMS, now designing for non-deterministic AI output, confidence variance, and failure states that don't behave like errors.">
+<meta name="description" content="Product designer in Denver. 10+ years in design, across IBM, Transamerica, and Tovuti LMS. Case studies written around the decision, the tradeoff, and whether the data has confirmed it yet.">
 <meta property="og:title" content="Erik Taylor — Product Designer">
-<meta property="og:description" content="Freelance product designer in Denver. Case studies written around the decision, the tradeoff, and whether the data has confirmed it yet.">
+<meta property="og:description" content="Product designer in Denver. Case studies written around the decision, the tradeoff, and whether the data has confirmed it yet.">
 <meta property="og:type" content="website">
 <link rel="preload" href="/fonts/archivo-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/fonts/archivo-black-latin.woff2" as="font" type="font/woff2" crossorigin>
@@ -14,17 +14,19 @@
 </head>
 <body>
 <!--
-  THESIS: A portfolio printed rather than composed. It refuses the ranked grid of
-  identical project cards; work arrives as plates pulled one ink at a time.
+  THESIS: A proof sheet, not a ranked run of identical project cards. The body of work
+  is pulled onto one sheet and exactly one impression is enlarged; hierarchy comes from
+  which frame gets pulled, never from card size.
   OWN-WORLD: Risograph duplicator printing. Paper white ground, soft black key layer
   carrying every character of type, Federal Blue owning whole regions at page scale,
-  Fluorescent Pink reserved for the single action that matters. Coarse dot screen on
-  all imagery, deliberate misregistration on interaction, true overprint where inks cross.
-  STORY: A hiring manager sees a working AI tool inside eight seconds, reads four
-  decisions with their tradeoffs and honest status, then emails.
-  FIRST VIEWPORT: Name and one claim at poster scale in the key layer, the journey-map
-  generator halftoned full-width beneath it, resume lit in pink at upper right.
-  FORM: Riso Studio, candidate 3 of the grounded list, seed key 0b11d1a3.
+  Fluorescent Pink reserved for the single action that matters. Coarse dot screen on all
+  imagery, deliberate misregistration on interaction, true overprint where inks cross.
+  STORY: A hiring manager reads one claim, sees a tool he built working directly beneath
+  it, scans three more decisions with their honest status, then emails.
+  FIRST VIEWPORT: The claim at poster scale across the sheet, lede and Email me ruled
+  beneath it, then the journey-map generator pulled at eight columns with its bet
+  annotated in the four-column margin.
+  FORM: Proof sheet and pull, candidate 4 of the grounded list, seed key bd5dc6f7.
   FINISH: unreviewed and undocumented is unfinished; this build ends with the finish
   review, the verdict, and DESIGN.md
 -->
@@ -44,109 +46,106 @@
 
 <main id="main">
 
-  <section class="hero">
+  <section class="lead">
     <div class="shell">
-      <h1>I design the parts of AI products that <em>don't behave.</em></h1>
-      <p class="hero__lede">Freelance product designer in Denver. 15+ years across IBM,
-      Transamerica, and Tovuti LMS — and the work now is non-deterministic output, confidence
-      variance, trust signals, and failure states that don't behave like traditional errors.</p>
-      <div class="hero__actions">
+      <h1>I take the harder call, then say <em>whether it paid off.</em></h1>
+
+      <div class="lead__head">
+        <p class="lead__lede">Product designer in Denver, freelance now. 10+ years in design: IBM,
+        Transamerica, Tovuti LMS. Four decisions below, and two are still waiting on data.</p>
         <a class="btn btn--lg" href="mailto:erikftaylor@gmail.com">Email me</a>
-        <p class="hero__status"><b>Open to product design roles</b> and freelance engagements.</p>
       </div>
-      <figure class="hero__plate registration">
-        <div class="plate">
-          <picture>
-            <source media="(max-width: 720px)" srcset="/media/journey-tool-mobile.webp">
-            <img src="/media/journey-tool.webp" alt="The journey-map generator: stage columns across the top with synthesized friction findings clustered in each one." width="2560" height="2218" fetchpriority="high">
-          </picture>
+
+      <div class="lead__sheet">
+        <figure class="lead__pull registration">
+          <a class="plate-link" href="/i-vibe-coded-a-journey-map-generator-auto-synthesizing-docs-and-demos-into-actionable-friction-maps/" tabindex="-1">
+            <div class="plate plate--lead">
+              <picture>
+                <source media="(max-width: 720px)" srcset="/media/journey-tool-mobile.webp" width="566" height="740">
+                <img src="/media/journey-tool-pull.webp" alt="The journey-map generator at working scale: a persona rail beside the Prerequisites and Configure stages, each carrying named friction findings — a prerequisite users never see surfaced, an approvals tab that never appears — with a proposed fix and its source under every one." width="954" height="740" fetchpriority="high">
+              </picture>
+            </div>
+          </a>
+        </figure>
+
+        <div class="lead__margin">
+          <h2><a href="/i-vibe-coded-a-journey-map-generator-auto-synthesizing-docs-and-demos-into-actionable-friction-maps/">The bet: build the tool instead of reading it all by hand</a></h2>
+          <p>Auditing scattered docs, tickets, and demo recordings by hand would have run
+          weeks before a single friction point was named. I bet a week of build time against
+          months of manual audit and vibe-coded a generator that synthesizes them into
+          journey maps.</p>
+          <p class="annot">
+            <span class="status status--shipped">Shipped</span>
+            <span class="tag">Solo · eight weeks end to end · tool building · B2B SaaS</span>
+          </p>
         </div>
-        <figcaption>The journey-map generator. Rather than hand-auditing scattered docs and
-        tickets for weeks, I bet a week of build time against months of manual work and
-        vibe-coded a tool that synthesizes them into friction maps. Solo, eight weeks.</figcaption>
-      </figure>
+      </div>
     </div>
   </section>
 
-  <section class="section" id="work">
+  <section class="section section--field" id="work">
     <div class="shell">
-      <h2>Four decisions, and whether they've been proven yet</h2>
-      <p class="section__intro">Each of these turned on a fork where the obvious option was
-      available and I took the other one. Where the data hasn't come back yet, the case study
-      says so.</p>
+      <h2>Three more calls, and where each one stands</h2>
+      <p class="section__intro">Each turned on a fork where the obvious option was available
+      and I took the other one. Where the data hasn't come back yet, the case study says so.</p>
 
-      <div class="work">
+      <div class="sheet">
 
-        <article class="entry">
+        <article class="impression">
           <figure>
-            <div class="plate plate--deep plate--crop">
-              <img src="/media/journey-detail.webp" alt="Several stage columns of the generated journey map side by side, each listing its synthesized friction findings." width="1840" height="1150" loading="lazy">
-            </div>
+            <a class="plate-link" href="/boosting-advisor-efficiency-with-a-renovated-navigation-experience/" tabindex="-1">
+              <div class="plate plate--crop">
+                <picture>
+                  <source media="(max-width: 720px)" srcset="/media/wfg-concept-2-mobile.webp" width="560" height="700">
+                  <img src="/media/wfg-concept-2-thumb.webp" alt="Concept 2 of the WFG agent portal navigation, its menus opened side by side so every tool sits under a named heading — Manage My Business, Grow My Business, and the rest." width="1478" height="702" loading="lazy">
+                </picture>
+              </div>
+            </a>
           </figure>
-          <div class="entry__body">
-            <h3><a href="/i-vibe-coded-a-journey-map-generator-auto-synthesizing-docs-and-demos-into-actionable-friction-maps/">The Bet: Build a Tool Instead of Reading It All by Hand</a></h3>
-            <p class="entry__bet">Manually auditing scattered feedback would have taken weeks.
-            I bet a week of build time against months of manual audit, vibe-coding a tool that
-            turned scattered docs and tickets into actionable journey maps.</p>
-            <p class="entry__meta">
-              <span class="status status--shipped">Shipped</span>
-              <span class="tag">Tool building · Journey mapping · Automation · B2B SaaS</span>
-            </p>
-          </div>
+          <h3><a href="/boosting-advisor-efficiency-with-a-renovated-navigation-experience/">Structural change vs. familiarity: a navigation tradeoff</a></h3>
+          <p>Research surfaced a better concept agents weren't sure they liked. I chose the
+          structural fix over the familiar one, betting resistance would fade once agents
+          adapted to it.</p>
+          <p class="annot">
+            <span class="status status--open">Data pending</span>
+            <span class="tag">UX research · Usability testing</span>
+          </p>
         </article>
 
-        <article class="entry entry--flip">
+        <article class="impression">
           <figure>
-            <div class="plate plate--crop">
-              <img src="/media/portal-dashboard.webp" alt="The redesigned financial agent portal dashboard shown on a laptop." width="1200" height="800" loading="lazy">
-            </div>
+            <a class="plate-link" href="/empowering-financial-agents-with-a-redesigned-portal-experience/" tabindex="-1">
+              <div class="plate plate--crop">
+                <img src="/media/portal-dashboard.webp" alt="The redesigned financial agent portal dashboard, with policy activity and tasks arranged for a single agent's day." width="1440" height="737" loading="lazy">
+              </div>
+            </a>
           </figure>
-          <div class="entry__body">
-            <h3><a href="/empowering-financial-agents-with-a-redesigned-portal-experience/">One Dashboard or Two: The Personalization Bet</a></h3>
-            <p class="entry__bet">The easy call was one shared dashboard for every agent. I
-            pushed for role-based views instead, trading build complexity for relevance — a bet
-            the data hasn't fully validated yet.</p>
-            <p class="entry__meta">
-              <span class="status status--open">Data pending</span>
-              <span class="tag">Personalization · Financial services · Design systems</span>
-            </p>
-          </div>
+          <h3><a href="/empowering-financial-agents-with-a-redesigned-portal-experience/">One dashboard or two: the personalization bet</a></h3>
+          <p>The easy call was one shared dashboard for every agent. I pushed for role-based
+          views instead, trading build complexity for relevance — a bet the data hasn't fully
+          validated yet.</p>
+          <p class="annot">
+            <span class="status status--open">Data pending</span>
+            <span class="tag">Personalization · Financial services</span>
+          </p>
         </article>
 
-        <article class="entry">
+        <article class="impression">
           <figure>
-            <div class="plate plate--crop">
-              <img src="/media/wfg-concept-2.webp" alt="Concept 2 of the WFG agent portal home page, organizing tools by frequency of use." width="1200" height="800" loading="lazy">
-            </div>
+            <a class="plate-link" href="/driving-adoption-and-engagement-with-ibms-digital-sellers-guidebook/" tabindex="-1">
+              <div class="plate plate--crop">
+                <img src="/media/ibm-guidebook-thumb.webp" alt="A page of IBM's Digital Sellers Guidebook showing condensed task guidance in place of training material." width="900" height="1326" loading="lazy">
+              </div>
+            </a>
           </figure>
-          <div class="entry__body">
-            <h3><a href="/boosting-advisor-efficiency-with-a-renovated-navigation-experience/">Structural Change vs. Familiarity: A Navigation Tradeoff</a></h3>
-            <p class="entry__bet">Research surfaced a better concept agents weren't sure they
-            liked. I chose the structural fix over the familiar one, betting resistance would
-            fade once agents adapted.</p>
-            <p class="entry__meta">
-              <span class="status status--open">Data pending</span>
-              <span class="tag">UX research · Prototyping · Usability testing · Mobile-first</span>
-            </p>
-          </div>
-        </article>
-
-        <article class="entry entry--flip">
-          <figure>
-            <div class="plate plate--deep plate--crop">
-              <img src="/media/ibm-guidebook.webp" alt="A page of IBM's Digital Sellers Guidebook showing condensed task guidance in place of training material." width="1200" height="800" loading="lazy">
-            </div>
-          </figure>
-          <div class="entry__body">
-            <h3><a href="/driving-adoption-and-engagement-with-ibms-digital-sellers-guidebook/">Why I Didn't Solve Adoption with More Training</a></h3>
-            <p class="entry__bet">Sellers weren't ignoring the platform from lack of training —
-            it was friction. Instead of pushing more sessions, I built a guidebook that removed
-            steps, betting less effort would beat more content.</p>
-            <p class="entry__meta">
-              <span class="status status--shipped">Shipped</span>
-              <span class="tag">Enterprise · Adoption · Content design · IBM</span>
-            </p>
-          </div>
+          <h3><a href="/driving-adoption-and-engagement-with-ibms-digital-sellers-guidebook/">Why I didn't solve adoption with more training</a></h3>
+          <p>Sellers weren't ignoring the platform for lack of training — it was friction.
+          Instead of pushing more sessions, I built a guidebook that removed steps, betting
+          less effort would beat more content.</p>
+          <p class="annot">
+            <span class="status status--shipped">Shipped</span>
+            <span class="tag">Enterprise · Adoption · Content design</span>
+          </p>
         </article>
 
       </div>
@@ -158,7 +157,7 @@
       <h2>Where the decisions get made</h2>
       <div class="split">
         <div class="prose">
-          <p>I'm a Denver-based product designer with 15+ years of experience — at IBM as a
+          <p>I'm a Denver-based product designer with 10+ years in design — at IBM as a
           copywriter, then a team lead, then a product owner and designer; at Transamerica in
           financial services; and most recently at Tovuti LMS, designing the interfaces that
           help teams teach, learn, and work together.</p>
@@ -174,50 +173,42 @@
           <p>If you're here because of LinkedIn — this is the longer version of that.</p>
           <figure class="portrait">
             <div class="plate">
-              <img src="/media/portrait.webp" alt="Erik Taylor" width="520" height="520" loading="lazy">
+              <img src="/media/portrait-640.webp" alt="Erik Taylor" width="640" height="640" loading="lazy">
             </div>
           </figure>
         </div>
-        <div>
+
+        <div class="ledger">
           <ul class="history">
             <li><b>Freelance Product Designer</b> <time>2026 — present</time></li>
             <li><b>Product Designer, Tovuti LMS</b> <time>2025 — 2026</time></li>
             <li><b>UX Designer, Transamerica</b> <time>2020 — 2024</time></li>
             <li><b>Product Owner / UX Designer, IBM</b> <time>2017 — 2020</time></li>
-            <li><b>Team Lead, IBM</b> <time>2010 — 2017</time></li>
-            <li><b>Copywriter, IBM</b> <time>2008 — 2010</time></li>
+            <li><b>Team Lead / Copywriter, IBM</b> <time>2010 — 2017</time></li>
           </ul>
-          <p style="margin-top:2rem"><a class="btn" href="/erik-taylor-resume.pdf">Download resume</a></p>
-        </div>
-      </div>
-    </div>
-  </section>
 
-  <section class="section section--field">
-    <div class="shell">
-      <h2>What people who worked with me said</h2>
-      <div class="quotes">
-        <blockquote>
-          <p>Working with Erik as his manager and design partner, I admired his passion for deep
-          customer empathy, collaborative approach, and focus on continuous improvement. He
-          continually sought feedback on his ideas and performance, and was always interested in
-          how he could better serve customers and his teams.</p>
-          <footer><b>Adam Reed</b> Design Lead, Transamerica</footer>
-        </blockquote>
-        <blockquote>
-          <p>Erik and I seamlessly collaborated on many design projects, including our ambitious
-          redesign of the life customer and agent portal. He was always generous with his time,
-          reviewing my work and offering thoughtful feedback, and I could always count on him
-          for help when needed.</p>
-          <footer><b>Joseph Pham</b> UX Designer, Transamerica</footer>
-        </blockquote>
-        <blockquote>
-          <p>During Erik's time with us, he consistently demonstrated exceptional skill,
-          creativity, and a calming demeanor that fostered collaboration and trust among team
-          members. Erik's expertise, thoughtfulness, and steady presence make him a tremendous
-          asset to any team.</p>
-          <footer><b>Richard Bogdon</b> Director, Digital Marketing, Transamerica</footer>
-        </blockquote>
+          <p class="ledger__action"><a class="btn" href="/erik-taylor-resume.pdf">Download resume</a></p>
+
+          <div class="endorsements">
+            <h3>What people who worked with me said</h3>
+            <blockquote>
+              <p>Working with Erik as his manager and design partner, I admired his passion for
+              deep customer empathy, collaborative approach, and focus on continuous
+              improvement.</p>
+              <footer><b>Adam Reed</b> Design Lead, Transamerica</footer>
+            </blockquote>
+            <blockquote>
+              <p>Erik and I seamlessly collaborated on many design projects, including our
+              ambitious redesign of the life customer and agent portal.</p>
+              <footer><b>Joseph Pham</b> UX Designer, Transamerica</footer>
+            </blockquote>
+            <blockquote>
+              <p>Erik's expertise, thoughtfulness, and steady presence make him a tremendous
+              asset to any team.</p>
+              <footer><b>Richard Bogdon</b> Director, Digital Marketing, Transamerica</footer>
+            </blockquote>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -231,6 +222,7 @@
         <a class="btn btn--lg" href="mailto:erikftaylor@gmail.com">erikftaylor@gmail.com</a>
         <a class="btn btn--lg" href="/erik-taylor-resume.pdf">Download resume</a>
       </div>
+      <p class="contact__status">Open to product design roles and freelance engagements.</p>
       <div class="linklist">
         <a href="https://www.linkedin.com/in/erikftaylor/">LinkedIn</a>
         <a href="https://x.com/erikftaylor">X</a>

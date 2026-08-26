@@ -90,9 +90,12 @@ anything else. LinkedIn is the dominant referrer.
   work."
 - **Availability:** open to work, stated quietly. Availability belongs in the contact
   section only — no banner, no badge, no urgency device.
-- **Tenure claim:** lead with **15+ years**, counted from IBM in 2008 across copywriting,
-  team lead, and design roles. The "8+ years" line is retired so the two never appear
-  together. One claim only.
+- **Tenure claim:** lead with **10+ years** (confirmed 2026-08-17, superseding the earlier
+  15+ decision). One claim only, and it is the same number the hosted resume carries — the
+  resume's own "9+ years" was raised to match on the same date. The earlier "8+ years" and
+  "15+ years" lines are both retired. Any surface that states tenure states 10+ and nothing
+  else; the work history still runs back to IBM in 2008, and the claim is a floor, not a
+  count of that span.
 - **Ridgeframe Strategies is deliberately off this surface.** Erik's consultancy and his
   co-founder are not mentioned and should not be added. Consequence accepted knowingly: the
   period after Tovuti goes unexplained here.

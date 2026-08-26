@@ -1,0 +1,317 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Erik Taylor — Senior Product Designer — Resume</title>
+<style>
+@font-face {
+  font-family: 'Archivo';
+  src: url('/fonts/archivo-latin.woff2') format('woff2');
+  font-weight: 400 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Archivo Black';
+  src: url('/fonts/archivo-black-latin.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@page {
+  size: letter;
+  margin: 0.55in 0.7in 0.5in;
+}
+
+:root {
+  --key: #16161a;
+  --key-2: #4a4a52;
+  --key-rule: #d6d6d2;
+  --field: #3d5588;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: 'Archivo', system-ui, sans-serif;
+  font-size: 9.6pt;
+  line-height: 1.42;
+  color: var(--key);
+  -webkit-font-smoothing: antialiased;
+}
+
+.masthead {
+  text-align: center;
+  padding-bottom: 0.5rem;
+  border-bottom: 1.5px solid var(--key);
+}
+
+.masthead h1 {
+  font-family: 'Archivo Black', sans-serif;
+  font-weight: 400;
+  font-size: 25pt;
+  letter-spacing: -0.03em;
+  line-height: 1;
+  margin: 0;
+}
+
+.masthead .role {
+  margin: 0.28rem 0 0.5rem;
+  font-size: 12pt;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  color: var(--field);
+}
+
+.masthead .line {
+  margin: 0;
+  font-size: 8.8pt;
+  color: var(--key-2);
+}
+
+.masthead .line + .line { margin-top: 0.12rem; }
+
+/* Live in the hosted PDF, and marked quietly enough not to stripe the line. */
+.masthead a {
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-color: var(--key-rule);
+  text-underline-offset: 2px;
+}
+
+h2 {
+  font-family: 'Archivo', sans-serif;
+  font-weight: 700;
+  font-size: 8.4pt;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: var(--field);
+  margin: 1.05rem 0 0.42rem;
+  padding-bottom: 0.2rem;
+  border-bottom: 1px solid var(--key-rule);
+}
+
+p { margin: 0; }
+
+.summary { color: var(--key-2); }
+
+.skill {
+  margin-top: 0.28rem;
+  color: var(--key-2);
+}
+
+.skill b {
+  color: var(--key);
+  font-weight: 700;
+}
+
+.role-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+  margin-top: 0.75rem;
+}
+
+.role-head:first-of-type { margin-top: 0; }
+
+.role-head b {
+  font-weight: 700;
+  font-size: 10.4pt;
+  letter-spacing: -0.01em;
+}
+
+.role-head .when {
+  font-size: 8.6pt;
+  color: var(--key-2);
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+.title-line {
+  font-size: 9.2pt;
+  font-weight: 600;
+  color: var(--field);
+  margin-top: 0.05rem;
+}
+
+ul {
+  margin: 0.3rem 0 0;
+  padding-left: 0.95rem;
+}
+
+li {
+  margin-top: 0.24rem;
+  color: var(--key-2);
+  padding-left: 0.1rem;
+}
+
+li::marker { color: var(--field); }
+
+.school {
+  margin-top: 0.55rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+}
+
+.school:first-of-type { margin-top: 0; }
+
+.school b { font-weight: 700; font-size: 9.8pt; }
+
+.school .cred { font-size: 8.8pt; color: var(--key-2); }
+
+.school-note {
+  font-size: 8.8pt;
+  color: var(--key-2);
+  margin-top: 0.1rem;
+}
+
+/* Only a role stays whole; a long section must be free to flow across the
+   break, or page one ends half empty. A heading never sits alone at a foot. */
+.role-block { break-inside: avoid; }
+h2 { break-after: avoid; }
+.role-head, .title-line { break-after: avoid; }
+.school { break-inside: avoid; }
+</style>
+</head>
+<body>
+
+<header class="masthead">
+  <h1>Erik Taylor</h1>
+  <p class="role">Senior Product Designer</p>
+  <p class="line">Denver, CO (Remote, United States) • <a href="tel:+17207718907">(720) 771-8907</a> • <a href="mailto:erikftaylor@gmail.com">erikftaylor@gmail.com</a></p>
+  <p class="line"><a href="https://www.linkedin.com/in/erikftaylor/">linkedin.com/in/erikftaylor</a> • Portfolio: <a href="https://etaylor.co">eTaylor.co</a></p>
+</header>
+
+<section>
+  <h2>Professional Summary</h2>
+  <p class="summary">Senior Product Designer with 10+ years on complex enterprise B2B products and a
+  shipped record of AI-empowered workflow design. Built AI tooling where the core design decision
+  was trust and oversight: what automation handles invisibly, and what stays observable and
+  verifiable so users remain in control. Turns in-depth user research into design decisions and
+  product direction, leads ambiguous projects from concept to delivery, and mentors designers on
+  accessibility and visual systems. Expert in Figma, experienced building and maintaining design
+  systems, with strong typography and visual craft. Practical judgment about when AI accelerates
+  design work and when deeper human evaluation is required, built from daily practice rather than
+  experimentation.</p>
+</section>
+
+<section>
+  <h2>Core Skills</h2>
+  <p class="skill"><b>AI-Empowered Design:</b> AI Workflow Design with Human Oversight, Trust and
+  Transparency Patterns, Custom Claude Skill Development, Claude Code, AI-Assisted Ideation,
+  Synthesis, and Prototyping, Judgment on AI Acceleration vs. Human Validation</p>
+  <p class="skill"><b>Research:</b> In-Depth User Research, Usability Testing, Customer Journey
+  Mapping, Service Blueprinting, Research Communication Across Teams, Evidence-Based Validation</p>
+  <p class="skill"><b>Product Design:</b> Complex Workflow Framing, End-to-End Design from Concept
+  to Delivery, Wireframes to High-Fidelity Mockups, Interactive Prototyping, Information
+  Architecture, Edge Case Design</p>
+  <p class="skill"><b>Visual Design:</b> Typography, Color, Layout Systems, Interaction Design,
+  High Craft Bar Across Product Areas</p>
+  <p class="skill"><b>Systems &amp; Leadership:</b> Design Systems and Libraries, Component Patterns
+  and Consistency, WCAG 2.1 AA Accessibility, Design Mentorship, Stakeholder Communication of
+  Rationale and Tradeoffs, Agile Delivery</p>
+  <p class="skill"><b>Tools:</b> Figma, Figma Make, Claude, Claude Code, ChatGPT, Sketch, GitHub,
+  Jira, Miro, Notion</p>
+</section>
+
+<section>
+  <h2>Professional Experience</h2>
+
+  <div class="role-block">
+    <div class="role-head">
+      <b>Freelance (Remote)</b>
+      <span class="when">June 2026 - Present</span>
+    </div>
+    <p class="title-line">Product Designer</p>
+    <ul>
+      <li>Independent product design practice on enterprise B2B and AI-empowered workflows,
+      and practical tools and frameworks for designers working with AI, published at
+      erikftaylor.gumroad.com.</li>
+    </ul>
+  </div>
+
+  <div class="role-block">
+    <div class="role-head">
+      <b>Tovuti LMS (Remote)</b>
+      <span class="when">July 2025 - June 2026</span>
+    </div>
+    <p class="title-line">Product Designer</p>
+    <ul>
+      <li>Built JEM, an AI journey-mapping tool developed partly in Claude Code that
+      cross-references support and CRM data to flag friction step by step; designed it so AI
+      findings stay fully observable and verifiable by the team rather than auto-applied, keeping
+      humans in control of decisions; surfaced 20 fixes, 10 shipped within a week.</li>
+      <li>Designed and shipped 10 custom Claude skills automating research synthesis, drawing the
+      automation line deliberately: mechanical aggregation ran invisibly while decision-driving
+      output remained human-reviewed; saved an estimated 10-15 hours per cycle.</li>
+      <li>Owned end-to-end design for an enterprise learning platform from ambiguous concepts
+      through delivery, turning multi-source research into product and backlog decisions with
+      product and engineering.</li>
+      <li>Built the design system and component library that 8-12 engineers shipped from, with
+      WCAG 2.1 AA built into every component from the start.</li>
+    </ul>
+  </div>
+
+  <div class="role-block">
+    <div class="role-head">
+      <b>Transamerica (Financial Services)</b>
+      <span class="when">November 2020 - November 2024</span>
+    </div>
+    <p class="title-line">Senior UX Designer</p>
+    <ul>
+      <li>Led the high-fidelity redesign and information architecture overhaul of a complex
+      advisory platform in a regulated environment, grounded in research with 100+ financial
+      advisors; leadership tied the work to a 30% increase in adoption among new agents.</li>
+      <li>Communicated research learnings and design tradeoffs across compliance, product, and
+      engineering through workshops that shifted product direction and surfaced service gaps
+      leadership had not seen.</li>
+      <li>Mentored designers on accessibility and visual systems and set the UI/UX standards the
+      team designed against, raising design quality across projects.</li>
+    </ul>
+  </div>
+
+  <div class="role-block">
+    <div class="role-head">
+      <b>IBM (via APC)</b>
+      <span class="when">July 2017 - July 2020</span>
+    </div>
+    <p class="title-line">Product Owner / UX Designer</p>
+    <ul>
+      <li>Owned product strategy and end-to-end design for a global enterprise platform, framing
+      ambiguous problems into backlog priorities for agile teams; contributed to 20% adoption
+      growth.</li>
+    </ul>
+  </div>
+
+  <div class="role-block">
+    <div class="role-head">
+      <b>IBM (via APC)</b>
+      <span class="when">January 2010 - July 2017</span>
+    </div>
+    <p class="title-line">Team Lead / Copywriter</p>
+    <ul>
+      <li>Led global content operations producing 2,500+ client profiles a year and redesigned the
+      editorial workflow to make it 50% more efficient.</li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <h2>Education</h2>
+  <div class="school">
+    <b>University of Denver</b>
+    <span class="cred">UX Design Bootcamp Certificate (2020)</span>
+  </div>
+  <p class="school-note">Human-Centered Design methodology, qualitative research methods, journey
+  mapping, usability testing</p>
+  <div class="school">
+    <b>University of Massachusetts Amherst</b>
+    <span class="cred">B.A., English Language &amp; Literature</span>
+  </div>
+</section>
+
+</body>
+</html>
