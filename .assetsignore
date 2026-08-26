@@ -12,3 +12,5 @@ wrangler.toml
 .assetsignore
 package.json
 package-lock.json
+cv-santiago-clone/
+portfolio-cc-test/
